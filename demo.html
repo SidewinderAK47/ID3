@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <style type="text/css">
+        body > div {
+            float:left    
+        }
+        .first{
+            width: 27%;
+            margin-right: 3%;
+        }
+        .second{
+            width: 70%;
+            background-color:darkgrey;
+        }
+        .first>div >botton{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            margin-top:10px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+        }
+        .first>div>textarea{
+            width:100%;
+            padding:0;
+        }
+
+        .first select{
+            background-color: #ffffff;
+            background-image: none !important;
+            filter: none !important;
+            border: 1px solid #e5e5e5;
+            outline: none;
+            height: 25px !important;
+            line-height: 25px;
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="first">
+        <div>
+            <textarea rows="10" cols="50" wrap="hard" id="textarea">[
+                {"天气":"晴","温度":"高","湿度":"大","风力":"无","类别":"否"},
+                {"天气":"晴","温度":"高","湿度":"大","风力":"无","类别":"否"},
+                {"天气":"云","温度":"高","湿度":"大","风力":"无","类别":"是"},
+                {"天气":"雨","温度":"中","湿度":"大","风力":"无","类别":"是"},
+                {"天气":"雨","温度":"低","湿度":"小","风力":"无","类别":"是"},
+                {"天气":"雨","温度":"低","湿度":"小","风力":"有","类别":"否"},
+                {"天气":"云","温度":"低","湿度":"小","风力":"有","类别":"是"},
+                {"天气":"晴","温度":"中","湿度":"大","风力":"无","类别":"否"},
+                {"天气":"晴","温度":"低","湿度":"小","风力":"无","类别":"是"},
+                {"天气":"雨","温度":"中","湿度":"小","风力":"无","类别":"是"},
+                {"天气":"晴","温度":"中","湿度":"小","风力":"有","类别":"是"},
+                {"天气":"云","温度":"中","湿度":"大","风力":"有","类别":"是"},
+                {"天气":"云","温度":"高","湿度":"小","风力":"无","类别":"是"},
+                {"天气":"雨","温度":"中","湿度":"大","风力":"有","类别":"否"}
+            ]</textarea>
+            <botton id="btn1">提交</botton>
+        </div>
+        <div>
+            <span>类别属性选择：</span>
+            <select id="select1">
+
+            </select>
+        </div>
+        <div>
+                <botton id="btn2">提交</botton>
+        </div>
+        <div>
+                <botton id="btn3">生成决策树</botton>
+        </div>
+    </div>
+
+    <div class="second">
+            <canvas id="myCanvas"  style="position:absolute; border: 1px solid black;" width="1800px" height="900px">
+                    您的浏览器不支持 HTML5 canvas 标签。
+            </canvas>
+    </div>
+    
+    <script src="./id3.js"> </script>
+</body>
+</html>
